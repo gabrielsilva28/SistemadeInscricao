@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="login.html" />
+    <title>Sistema de Inscrição</title>
+</head>
+
+<body>
+    <main>
+        <form class="card" action="cadastro.html">
+            <div class="dados">
+                <h1>Sistema de Inscrição</h1>
+                <div class="inserir"> 
+                    <input type="text" placeholder="Nome Completo" name="name" required/>
+                    <input type="text" placeholder="CPF" name="cpf" pattern="[0-9]{11}" maxlength="11" required/>
+                    <input type="date" placeholder="Data de Nascimento" name="data">
+                    <input type="tel" placeholder="Telefone" name="telefone" minlength="9"
+                    maxlength="13" required/>
+                    <input type="email" placeholder="Email" name="email" required/>
+                    <input type="text" placeholder="Endereço" name="endereco" required/>
+                    <input type="text" placeholder="CEP" name="cep" required/>
+                    <input type="password" placeholder="Senha" name="senha" minlength="8" required/>
+                </div> 
+                <div class="anexar">
+                    <div class="identidade-doc">
+                        <label for='envio-arquivo'>
+                            <img src="imagens/doc.svg" alt="identidade">
+                            Documento de identificação<br>(PDF, PNG e JPG).
+                            <img src="imagens/file.svg" alt="enviar arquivo">
+                        </label>
+                        <input id='envio-arquivo' type='file' placeholder="identidade" name="identidade" accept=".pdf, .png, .jpg" required/>
+                    </div>
+                    <div class="comprovante-res">   
+                        <label for='envio-arquivo'>
+                            <img src="imagens/res.svg" alt="comprovante de residencia"> 
+                            Comprovante de residência<br>(PDF, PNG e JPG).
+                            <img src="imagens/file.svg" alt="enviar arquivo">
+                        </label>
+                        <input id='envio-arquivo' type='file' placeholder="Comprovante" name="comprovante" accept=".pdf, .png, .jpg" required/>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                <div class="botoes">
+                    <a href="login.html"><button class="botao-red" type="button">Cancelar</button></a>
+                    <button class="botao-green" type="submit">Confirmar</button>
+                </div>  
+            </div>
+        </form>
+    </main>
+</body>
+</html>

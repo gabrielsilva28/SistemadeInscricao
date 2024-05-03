@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-image: url(imagens/fundo.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.dados{
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: black;
+}
+
+input{
+    width:350px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: yellow;
+    font-weight: 900;
+}
+
+
+input::placeholder {
+    color: black;
+}
+
+/*envio de arquivo*/
+
+input[type='file'] {
+    display: none
+}
+
+.anexar, .identidade-doc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    align-items: center;
+}
+
+label{
+    display: flex;
+    width: 160px;
+    height: 50px;
+    padding: 5px;
+    font-size: 10px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: yellow;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.ienvio-arquivo{
+    margin: 10px;
+}
+
+/*botoes*/
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+button{
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #20D448;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+button.botao-red{
+    margin: 20px;
+    cursor: pointer;
+    background-color: #FF0000;
+}
+
+/*login*/
+
+a{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.acesso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.texto{
+    color: rgb(4, 4, 7);
+}
+
+
+
+
