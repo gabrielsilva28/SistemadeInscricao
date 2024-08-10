@@ -4,133 +4,130 @@
     padding: 0;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    background-image: url(imagens/fundo.png);
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d3b66;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 100vh;
 }
 
-h1{
-    align-items: center;
+h1 {
+    color: white;
+    font-size: 1.8em;
     text-align: center;
-    color: rgb(255, 255, 255);
-    margin: 20px;
+    margin-bottom: 10px;
 }
 
-.card{
+main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    height: 90%;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 10px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    display: flex;
     align-items: center;
-    text-align: center;
-    width: 350px;
-    height: 500px;
-    position: relative;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
 }
 
-
-.dados{
-    width: auto;
-    height: auto;
-    margin-bottom: 20px;
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-    border: black;
+.dados {
+    width: 100%;
 }
 
-input{
-    width:350px;
-    margin: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-radius: 10px;
-    border: 2px solid black;
-    padding: 5px;
-    background-color: yellow;
-    font-weight: 900;
-    text-indent: 1em;  
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 input::placeholder {
-    color: black;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/*envio de arquivo*/
+.anexar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 160px;
+    height: 50px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.60rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
 
 input[type='file'] {
     display: none;
 }
 
-.anexar, .identidade-doc{
+.botoes {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    width: 100%;
+    gap: 40px;
+    margin: 10px 0;
 }
 
-img{
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
-    align-items: center;
-}
-
-label{
-    display: flex;
-    width: 160px;
-    height: 50px;
-    padding: 5px;
-    font-size: 10px;
-    margin: 10px;
-    align-items: center;
-    border-radius: 10px;
-    background-color: yellow;
-    border: 2px solid black;
-    cursor: pointer;
-}
-
-.ienvio-arquivo{
-    margin: 10px;
-}
-
-/*botoes*/
-
-.botoes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-button{
-    padding: 5px;
+button {
     width: 100px;
-    height: 30px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 5px;
     border: none;
-    background-color: #1CBA3F;
-    margin: 20px;
-    cursor: pointer;
     font-weight: bold;
-    border: 2px solid black;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button.botao-red{
-    margin: 20px;
-    cursor: pointer;
-    background-color: #FF0000;
+button.botao-red {
+    background-color: #ff5252;
+}
+
+button.botao-red:hover {
+    background-color: #ff7979;
+}
+
+button.botao-green {
+    background-color: #4caf50;
+}
+
+button.botao-green:hover {
+    background-color: #81c784;
 }
 
 /*login*/
@@ -138,6 +135,7 @@ button.botao-red{
 a{
     text-decoration: none;
     font-weight: 900;
+    font-size: 0.85em;
 }
 
 .acesso{
@@ -147,13 +145,111 @@ a{
     text-align: center;
     height: 120px;
     position: relative;
-    margin: 0 auto;
+    margin: 10px;
 }
 
 .texto{
-    color: rgb(4, 4, 7);
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+
+    main{
+        height: 80%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        padding: 0px 20px;
+        margin: 5px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        gap: 20px;  
+    }
+
+    button {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    label {
+        width: 140px;
+        height: 40px;
+        font-size: 0.55rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main{
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+
+    .botoes {
+        gap: 20px;
+    }
+
+    button {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+
+    label {
+        width: 120px;
+        height: 35px;
+        font-size: 0.5rem;
+    }
 }
 
 
+@media (max-width: 425px) {
+    main{
+        height: auto;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
 
+    .card {
+        padding: 10px;
+        max-width: 90%;
+    }
 
+    .botoes {
+        gap: 30px;
+    }
+
+    button {
+        width: 70px;
+        font-size: 0.7rem;
+    }
+
+    label {
+        width: 120px;
+        height: 35px;
+        font-size: 0.45rem;
+        margin: 10px;
+        gap: 5px;
+    }
+
+    label img {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 5px;
+    }
+}
